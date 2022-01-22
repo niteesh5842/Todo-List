@@ -1,0 +1,65 @@
+<div class="container">
+  <section>
+    <h1 class="header-section p-5 text-center shadow bg-body-rounded">
+      TODO LIST
+    </h1>
+  </section>
+  <div class="newTodo-box w-50 mx-auto border rounded bg-white">
+    <div class="d-flex justify-content-sm-center pt-2">
+      <h5>Add To List</h5>
+    </div>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <div class="input-group mt-3 mb-3 p-2">
+        <input
+          ngModel
+          required
+          #text="ngModel"
+          name="text"
+          type="text"
+          class="form-control rounded"
+          placeholder="Click here to Add!!"
+        />
+        <button
+          class="btn btn-success mx-2 rounded d-flex align-items-center"
+          type="submit"
+          [disabled]="!form.valid"
+        >
+          <i class="material-icons">add</i>
+        </button>
+      </div>
+      <span
+        class="help-block mx-3 text-danger"
+        *ngIf="!text.valid && text.touched"
+      >
+        Please enter a valid Todo!!!
+      </span>
+    </form>
+  </div>
+  <section class="section w-50 mx-auto mt-5">
+    <div class="todo-list">
+      <div
+        class="todo-item d-flex flex-row align-items-center px-2 py-1 border-bottom"
+        [class.completed]="todo.completed"
+        *ngFor="let todo of todos"
+        style="cursor: pointer"
+      >
+        <div
+          class="check-box border rounded-circle d-flex justify-content-center"
+        >
+          <i class="material-icons text-black-50">check</i>
+        </div>
+        <div class="todo-text px-2">
+          {{ todo.text }}
+        </div>
+        <div class="todo-control-box d-flex flex-row ms-auto">
+          <div class="edit-control-button">
+            <i class="material-icons px-1">edit</i>
+          </div>
+          <div class="delete-control-button">
+            <i class="material-icons">delete</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
