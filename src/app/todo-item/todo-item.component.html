@@ -1,1 +1,24 @@
-
+<div
+  class="todo-item d-flex flex-row align-items-center px-2 py-3 border-bottom"
+  [class.completed]="todo.completed"
+  style="cursor: pointer"
+  (click)="onTodoClicked()"
+>
+  <div class="check-box border rounded-circle d-flex justify-content-center">
+    <i class="material-icons text-black-50">check</i>
+  </div>
+  <div class="todo-text px-2">
+    {{ todo.text }}
+  </div>
+  <div
+    class="todo-control-box d-flex flex-row ms-auto"
+    (click)="$event.stopPropagation()"
+  >
+    <div class="edit-control-button" (click)="onEditClicked()">
+      <i class="material-icons px-1">edit</i>
+    </div>
+    <div class="delete-control-button">
+      <i class="material-icons">delete</i>
+    </div>
+  </div>
+</div>
