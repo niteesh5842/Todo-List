@@ -4,7 +4,7 @@
       TODO LIST
     </h1>
   </section>
-  <div class="newTodo-box w-50 mx-auto border rounded bg-white">
+  <div class="newTodo-box w-50 mx-auto border rounded bg-white container-box">
     <div class="d-flex justify-content-sm-center pt-2">
       <h5>Add To List</h5>
     </div>
@@ -25,6 +25,7 @@
           [disabled]="!form.valid"
         >
           <i class="material-icons">add</i>
+          Add
         </button>
       </div>
       <span
@@ -42,6 +43,7 @@
         [todo]="todo"
         (todoClicked)="toggleCompleted(todo)"
         (editClicked)="editTodo(todo)"
+        (deleteClicked)="deleteTodo(todo)"
       ></app-todo-item>
     </div>
   </section>

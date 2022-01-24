@@ -7,51 +7,8 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.todo-item .check-box i {
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.todo-item:hover .check-box {
-  background-color: #eee;
-}
-
-.todo-item:hover .check-box i {
-  opacity: 0.25;
-}
-
-.todo-item.completed {
-  color: #aaa;
-}
-
-.todo-item.completed .check-box {
-  background: rgb(11, 223, 170);
-}
-
-.todo-item.completed .check-box i {
-  opacity: 1;
-}
-
-.todo-item .todo-control-box .edit-control-button i {
-  opacity: 0;
-}
-
-.todo-item:hover .todo-control-box .edit-control-button i {
-  opacity: 1;
-}
-
-.todo-item .todo-control-box .edit-control-button:hover {
-  color: green;
-}
-
-.todo-item .todo-control-box .delete-control-button i {
-  opacity: 0;
-}
-
-.todo-item:hover .todo-control-box .delete-control-button i {
-  opacity: 1;
-}
-
-.todo-item .todo-control-box .delete-control-button:hover i {
-  color: red;
+.container-box {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }

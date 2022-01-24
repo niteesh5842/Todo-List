@@ -6,10 +6,10 @@ import { Todo } from './todo.model';
 })
 export class DataServiceService {
   todos: Todo[] = [
-    new Todo('this is a test'),
-    new Todo(
-      'lorem ipsum hdgdgd jhgfkghfb reytwuvhkjs oihuishfiohff khioushfohfoihhiohf'
-    ),
+    // new Todo('this is a test'),
+    // new Todo(
+    //   'lorem ipsum hdgdgd jhgfkghfb reytwuvhkjs oihuishfiohff khioushfohfoihhiohf'
+    // ),
   ];
 
   constructor() {}
